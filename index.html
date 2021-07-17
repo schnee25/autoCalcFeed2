@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header>
+      <h1>リヴリー　給餌計算</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="inputField">
+          <table class="alignCenter">
+            <thead>
+              <tr>
+                <th>R</th>
+                <th>B</th>
+                <th>G</th>
+              </tr>
+
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    id="CurrentPercentageR"
+                    name="percentage"
+                    value="0"
+                    required
+                    min="-255"
+                    max="255"
+                    onchange=""
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    id="CurrentPercentageG"
+                    name="percentage"
+                    value="0"
+                    required
+                    min="-255"
+                    max="255"
+                    onchange=""
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    id="CurrentPercentageB"
+                    name="percentage"
+                    value="0"
+                    required
+                    min="-255"
+                    max="255"
+                    onchange=""
+                  />
+                </td>
+              </tr>
+             </thead>
+          </table>
+
+          <table>
+            <tbody>
+              <tr>
+                <th class="bugsName">テントウ </th>
+                <th class="explain"> (少し赤に近づく)</th>
+                <td class="bugsNum">
+                  <input 
+                  type="number"
+                  id="Ladybug"
+                  name="percentage" 
+                  value="0"
+                  required min="-255" 
+                  max="255" 
+                  onchange="" />
+                </td>
+              </tr>
+
+              <tr>
+                <th class="bugsName">バッタ</th>
+                <th class="explain"> (少し緑に近づく)</th>
+                <td class="bugsNum">
+                  <input
+                    type="number"
+                    id="AtractomorphaLata"
+                    name="percentage"
+                    value="0"
+                    required
+                    min="-255"
+                    max="255"
+                    onchange=""
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <th class="bugsName">ルリセンチ</th>
+                <th class="explain"> (少し青に近づく)</th>
+                <td class="bugsNum">
+                  <input 
+                  type="number" 
+                  id="Geotrupidae" 
+                  name="percentage" 
+                  value="0"
+                  required
+                  min="-255"
+                  max="255" 
+                  onchange="" />
+                </td>
+              </tr>
+
+              <tr>
+                <th class="bugsName">ツマグロ</th>
+                <th class="explain"> (より赤に近づく)</th>
+                <td class="bugsNum">
+                  <input type="number" 
+                  id="IndianFritillary" 
+                  name="percentage"
+                  value="0"
+                  required
+                  min="-255"
+                  max="255"  
+                  onchange="" />
+                </td>
+              </tr>
+
+              <tr>
+                <th class="bugsName">モンシロ</th>
+                <th class="explain"> (より緑に近づく)</th>
+                <td class="bugsNum">
+                  <input 
+                  type="number" 
+                  id="Cabbagewhitebutterfly" 
+                  name="percentage"
+                  value="0"
+                  required
+                  min="-255"
+                  max="255"  
+                  onchange="" />
+                </td>
+              </tr>
+
+              <tr>
+                <th class="bugsName">セスジスズメ</th>
+                <th class="explain"> (より青に近づく)</th>
+                <td class="bugsNum">
+                  <input type="number" 
+                  id="TheretraOldenlandia" 
+                  name="percentage"
+                  value="0"
+                  required
+                  min="-255"
+                  max="255"  
+                  onchange="" />
+                </td>
+              </tr>
+
+              <tr>
+                <th class="bugsName">カブト</th>
+                <th class="explain"> (少し白に近づく)</th>
+                <td class="bugsNum">
+                  <input 
+                  type="number" 
+                  id="Beetle" 
+                  name="percentage"
+                  value="0"
+                  required
+                  min="-255"
+                  max="255"  
+                  onchange="" />
+                </td>
+              </tr>
+
+              <tr>
+                <th class="bugsName">クロアリ</th>
+                <th class="explain"> (少し黒に近づく)</th>
+                <td class="bugsNum">
+                  <input 
+                  type="number" 
+                  id="Formicaaponica"
+                  value="0"
+                  required
+                  min="-255"
+                  max="255"  
+                  name="percentage" 
+                  onchange="" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="runCalc">
+          <input type="button" value="計算する" onclick="calcButtonClick()" />
+        </div>
+        <div class="result">
+          <table class="alignCenter">
+          <tfoot>
+            <tr>
+              <th>R</th>
+              <th>B</th>
+              <th>G</th>
+            </tr>
+            <tr>
+              <td>
+                <input name="result" 
+                type="number" 
+                id="ResultR"
+                min="-255"
+                max="255"></input>
+              </td>
+              <td>
+                <input 
+                name="result" 
+                type="number" 
+                id="ResultG"
+                min="-255"
+                max="255"></input>
+              </td>
+              <td>
+                <input 
+                name="result" 
+                type="number" 
+                id="ResultB"
+                min="-255"
+                max="255"></input>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

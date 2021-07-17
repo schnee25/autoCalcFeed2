@@ -1,0 +1,25 @@
+header {
+  text-align: center;
+}
+.alignCenter {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0px 15px 0px;
+}
+.bugsName {
+  width: calc(100vw * 0.3);
+  text-align: left;
+}
+.explain {
+  font-size: small;
+  width: calc(100vw * 0.3);
+  text-align: left;
+}
+.bugsNum {
+  width: calc(100vw * 0.3);
+  text-align: center;
+}
+.runCalc {
+  text-align: center;
+  margin: 15px 0px 0px 0px;
+}
